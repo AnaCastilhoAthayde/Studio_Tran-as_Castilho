@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio de Tranças Castilho - Seu Visual Transformado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+            background-color: #f9f0e8;
+        }
+        
+        /* Fundo animado */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #f5d6b8 0%, #e6b8a2 50%, #d9a38f 100%);
+            opacity: 0.9;
+        }
+        
+        .braid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(45deg, rgba(74, 54, 41, 0.05) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(74, 54, 41, 0.05) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(94, 74, 61, 0.05) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(94, 74, 61, 0.05) 75%);
+            background-size: 40px 40px;
+            z-index: -1;
+            animation: slide 60s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+        
+        /* Estilos do conteúdo (mantendo o original) */
+        header {
+            background-color: rgba(241, 192, 148, 0.9);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #d9a38f;
+        }
+        
+        h1 {
+            color: #5e4a3d;
+            margin: 0;
+        }
+        
+        h2 {
+            color: #8c6a56;
+            margin: 5px 0 0 0;
+            font-weight: normal;
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 175, 132, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }   
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            color: #000000;
+            border-bottom: 1px solid #e3b2a6;
+            padding-bottom: 5px;
+        }   
+        
+        footer {
+            background-color: rgba(118, 79, 53, 0.9);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo animado -->
+    <div class="background"></div>
+    <div class="braid-pattern"></div>
+
+    <!-- Conteúdo original -->
+    <header>
+        <h1>Studio de Tranças Castilho</h1>
+        <h2>Transformando cabelos em obras de arte</h2>
+    </header>
+
+    <main>
+        <section>
+            <h3>Nossos Serviços</h3>
+            <div>
+                <h4>Tranças Box Braids</h4>
+                <img src="{{ url_for('static', filename='Boxbraid.jfif')}}" alt="Box Braids" width="300">
+                <p>Perfeitas para quem busca um visual moderno e duradouro.</p>
+            </div>
+            
+            <div>
+                <h4>Tranças Nagô</h4>
+                <img src="{{ url_for('static', filename='nago1.jfif') }}" alt="Tranças Nagô" width="300">
+                <p>Um clássico que nunca sai de moda.</p>
+            </div>
+            
+            <div>
+                <h4>Twists</h4>
+                <img src="{{ url_for('static', filename='Twists.jfif') }}" alt="Twists" width="300">
+                <p>Estilo natural e cheio de personalidade.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Agende Seu Horário</h3>
+            <p>WhatsApp: (11) 7355-1544</p>
+            <p>Email: castilho.athayde@gmail.com</p>
+            <p>Endereço: Rua das Tranças, 123 - Centro Santana de Parnaiba</p>
+            <p>Para mais informações entre em contato sera um prazer atende-los</p>
+        </section>
+
+        <section>
+            <h3>Por que nos escolher?</h3>
+            <ul>
+                <li>Profissionais certificadas</li>
+                <li>Produtos de qualidade</li>
+                <li>Ambiente aconchegante</li>
+                <li>Atendimento personalizado</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p> Studio Tranças Castilho - Todos os direitos reservados</p>
+        <p>Horário de funcionamento: Segunda a Sábado, das 9h às 19h</p>
+    </footer>
+</body>
+</html>
